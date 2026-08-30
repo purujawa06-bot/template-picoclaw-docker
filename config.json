@@ -1,0 +1,38 @@
+{
+  "model_list": [
+    {
+      "model_name": "auto",
+      "model": "openai/auto",
+      "api_keys": [
+        "sk-puru-is-free-no-apikey"
+      ],
+      "api_base": "https://puruboy-api.vercel.app/api"
+    }
+  ],
+  "version": 3,
+  "agents": {
+    "defaults": {
+      "model_name": "auto",
+      "max_tokens": 8192,
+      "context_window": 128000,
+      "max_llm_retries": 10,
+      "max_tool_iterations": 100
+    }
+  },
+  "channel_list": {
+    "telegram": {
+      "enabled": true,
+      "type": "telegram",
+      "allow_from": [
+        "7004559855"
+      ],
+      "settings": {
+        "token": "${PURU_TELEGRAM_TOKEN}",
+        "use_markdown_v2": true,
+        "streaming": {
+          "enabled": true
+        }
+      }
+    }
+  }
+}
