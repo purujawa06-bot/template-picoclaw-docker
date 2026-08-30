@@ -25,7 +25,8 @@ RUN mkdir -p /root/.picoclaw/workspace \
     done > /root/.picoclaw/workspace/SOUL.md
 #---
 
-#config & user
+#copy aja lah
+COPY skills /root/.picoclaw/workspace/skills
 COPY config.json /root/.picoclaw/config.json
 COPY USER.md /root/.picoclaw/workspace/USER.md
 #---
