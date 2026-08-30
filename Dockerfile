@@ -1,22 +1,10 @@
 #---
-FROM node:20-bookworm-slim AS node-tools
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git ca-certificates curl \
-    && rm -rf /var/lib/apt/lists/*
-RUN curl -sSL https://github.com/cli/cli/releases/download/v2.55.0/gh_2.55.0_linux_amd64.tar.gz -o gh.tar.gz \
-    && tar -xzf gh.tar.gz -C /usr/local --strip-components=1 \
-    && rm gh.tar.gz
-#---
-FROM sipeed/picoclaw:latest AS picoclaw
-#---
-FROM node-tools
-COPY --from=picoclaw /usr/local/bin/ /opt/picoclaw/bin/
-ENV PATH="/opt/picoclaw/bin:${PATH}"
+FROM sipeed/picoclaw:latest
 #---
 ENV GODEBUG=madvdontneed=1
 ENV GOMEMLIMIT=50MiB
 ENV PICOCLAW_GATEWAY_PORT=8080
 ENV PICOCLAW_GATEWAY_HOST=0.0.0.0
-ENV NODE_OPTIONS="--max-old-space-size=96 --max-semi-space-size=2"
 #---
 COPY rules /rules
 RUN mkdir -p /root/.picoclaw/workspace \
