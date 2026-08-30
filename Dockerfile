@@ -4,7 +4,7 @@ FROM sipeed/picoclaw:latest
 
 #INSTALL NODEJS
 FROM node:20-alpine AS pico-node
-COPY --from=pico-node /usr/local /usr/local
+COPY --from=node:20-alpine /usr/local /usr/local
 #---
 
 #VARIABLE
