@@ -27,7 +27,7 @@
         "7004559855"
       ],
       "settings": {
-        "token": "${PURU_TELEGRAM_TOKEN}",
+        "token": "8535593654:AAEaEddzmyzVxkwWPy1l8JiHT7UfPZ-pOtA",
         "use_markdown_v2": true,
         "streaming": {
           "enabled": true
