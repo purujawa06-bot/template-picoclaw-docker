@@ -1,14 +1,16 @@
 #---
 FROM node:20-bookworm-slim AS node
-#---
-FROM ghcr.io/gh-cli/gh-cli:latest AS gh
+RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates \
+    && curl -sSL https://github.com/cli/cli/releases/download/v2.55.0/gh_2.55.0_linux_amd64.tar.gz -o gh.tar.gz \
+    && tar -xzf gh.tar.gz -C /usr/local --strip-components=1 \
+    && rm gh.tar.gz \
+    && rm -rf /var/lib/apt/lists/*
 #---
 FROM sipeed/picoclaw:latest AS picoclaw
 #---
 FROM picoclaw
 COPY --from=node /usr/local /usr/local
-COPY --from=gh /usr/local/bin/gh /usr/local/bin/gh
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git ca-certificates curl \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /usr/bin/apt /usr/bin/apt-get /usr/bin/apt-cache /usr/bin/apt-config /usr/bin/apt-mark /usr/bin/dpkg /usr/bin/dpkg-deb /usr/bin/dpkg-query /usr/bin/dpkg-split /usr/bin/dpkg-statoverride /usr/bin/dpkg-trigger
 #---
