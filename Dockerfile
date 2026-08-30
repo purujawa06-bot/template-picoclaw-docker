@@ -9,5 +9,5 @@ ENV PICOCLAW_GATEWAY_HOST=0.0.0.0
 
 #-----
 WORKDIR /app
-COPY config.json /app/.picoclaw/config.json
+COPY config.json /app/root/.picoclaw/config.json
 
