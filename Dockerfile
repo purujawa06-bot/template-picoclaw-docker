@@ -1,10 +1,14 @@
 #INSTALL PICOCLAW 
-FROM sipeed/picoclaw:latest
+FROM sipeed/picoclaw:latest AS picoclaw
 #---
 
 #INSTALL NODEJS
-FROM node:20-alpine AS pico-node
-COPY --from=node:20-alpine /usr/local /usr/local
+FROM node:20-alpine AS node
+#---
+
+#FINAL IMAGE
+FROM picoclaw
+COPY --from=node /usr/local /usr/local
 #---
 
 #VARIABLE
