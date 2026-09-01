@@ -53,15 +53,3 @@ curl -X POST "[https://puruboy-api.vercel.app/api/text2image](https://puruboy-ap
 > 
 > 
 ```
-
----
-
-### 🚀 Cara Pemasangan & Penggunaan:
-
-1. **Simpan File:** 
-   Buat folder dan simpan file di atas ke: `~/.claude/skills/text2image-generator/SKILL.md`
-2. **Uji Coba:**
-   Buka kembali Claude Code lalu berikan perintah:
-   *"Bikinin gambar pemandangan gunung saat matahari terbenam."*
-
-Apakah struktur skill ini sudah sesuai dengan kebutuhanmu, atau ada parameter API lain yang ingin ditambahkan?
