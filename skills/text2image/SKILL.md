@@ -50,4 +50,3 @@ curl -X POST "[https://puruboy-api.vercel.app/api/text2image](https://puruboy-ap
 ```
 **Output:**
 > Gambar berhasil dibuat!
-```
