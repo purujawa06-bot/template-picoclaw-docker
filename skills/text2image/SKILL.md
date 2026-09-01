@@ -32,7 +32,7 @@ Contoh respons sukses:
 
 ```
 ### Langkah 3: Tampilkan Hasil
-Tampilkan URL gambar yang dihasilkan dari array images kepada pengguna dalam format Markdown image: ![Hasil Gambar](URL_GAMBAR).
+kirim gambar yang dihasilkan dari array images kepada pengguna 
 ## Contoh Penggunaan
 **Input Pengguna:**
 > "Bikinin gambar rubah merah di hutan salju dong, rasio 1:1"
