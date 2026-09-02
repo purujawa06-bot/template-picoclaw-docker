@@ -16,7 +16,10 @@
       "max_tokens": 8192,
       "context_window": 128000,
       "max_llm_retries": 10,
-      "max_tool_iterations": 100
+      "max_tool_iterations": 100,
+      "tool_feedback": {
+        "enabled": false
+      }
     }
   },
   "channel_list": {
