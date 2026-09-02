@@ -18,7 +18,7 @@
       "max_llm_retries": 10,
       "max_tool_iterations": 100,
       "tool_feedback": {
-        "enabled": false
+        "enabled": true
       }
     }
   },
