@@ -15,22 +15,7 @@
       "tool_feedback": {
         "enabled": true
       },
-      "split_on_marker": true,
-      "turn_profile": {
-        "enabled": true,
-        "history": {
-          "mode": "off"
-        },
-        "system_prompt": {
-          "mode": "default"
-        },
-        "skills": {
-          "mode": "default"
-        },
-        "tools": {
-          "mode": "default"
-        }
-      }
+      "split_on_marker": true
     }
   },
   "evolution": {
