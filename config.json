@@ -1,12 +1,12 @@
 {
   "model_list": [
     {
-      "model_name": "auto",
-      "model": "openai/auto",
+      "model_name": "puru",
+      "model": "openai/puru",
       "api_keys": [
-        "sk-puru-is-free-no-apikey"
+        "sk-843e3f05f05eacfe-55n2je-f2c2b844"
       ],
-      "api_base": "https://puruboy-api.vercel.app/api"
+      "api_base": "https://nirkyy-a.hf.space/v1"
     }
   ],
   "version": 3,
@@ -16,7 +16,7 @@
       "max_tokens": 8192,
       "context_window": 128000,
       "max_llm_retries": 10,
-      "max_tool_iterations": 100,
+      "max_tool_iterations": 500,
       "tool_feedback": {
         "enabled": true
       }
