@@ -1,26 +1,44 @@
 {
-  "model_list": [
-    {
-      "model_name": "puru",
-      "model": "openai/puru",
-      "api_keys": [
-        "sk-843e3f05f05eacfe-55n2je-f2c2b844"
-      ],
-      "api_base": "https://nirkyy-a.hf.space/v1"
-    }
-  ],
+  "session": {
+    "dimensions": [
+      "chat"
+    ],
+    "dm_scope": "global"
+  },
   "version": 3,
   "agents": {
     "defaults": {
-      "model_name": "auto",
-      "max_tokens": 8192,
-      "context_window": 128000,
+      "model_name": "puru",
+      "context_window": 50000,
       "max_llm_retries": 10,
       "max_tool_iterations": 500,
       "tool_feedback": {
         "enabled": true
+      },
+      "split_on_marker": true,
+      "turn_profile": {
+        "enabled": true,
+        "history": {
+          "mode": "off"
+        },
+        "system_prompt": {
+          "mode": "default"
+        },
+        "skills": {
+          "mode": "default"
+        },
+        "tools": {
+          "mode": "default"
+        }
       }
     }
+  },
+  "evolution": {
+    "enabled": true,
+    "mode": "apply",
+    "min_task_count": 2,
+    "min_success_ratio": 0.7,
+    "cold_path_trigger": "after_turn"
   },
   "channel_list": {
     "telegram": {
@@ -29,6 +47,12 @@
       "allow_from": [
         "7004559855"
       ],
+      "placeholder": {
+        "enabled": true,
+        "text": [
+          "Thinking... 💭"
+        ]
+      },
       "settings": {
         "token": "8535593654:AAEaEddzmyzVxkwWPy1l8JiHT7UfPZ-pOtA",
         "streaming": {
@@ -36,5 +60,18 @@
         }
       }
     }
-  }
+  },
+  "model_list": [
+    {
+      "model_name": "puru",
+      "model": "openai/puru",
+      "api_keys": [
+        "sk-843e3f05f05eacfe-55n2je-f2c2b844"
+      ],
+      "api_base": "https://nirkyy-a.hf.space/v1",
+      "streaming": {
+        "enabled": true
+      }
+    }
+  ]
 }
