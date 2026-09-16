@@ -6,3 +6,6 @@ ENV GOMEMLIMIT=50MiB
 ENV PICOCLAW_GATEWAY_PORT=8080
 ENV PICOCLAW_GATEWAY_HOST=0.0.0.0
 #---
+COPY skills /root/.picoclaw/workspace/skills
+COPY config.json /root/.picoclaw/config.json
+#---
