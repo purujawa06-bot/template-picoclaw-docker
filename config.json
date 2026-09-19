@@ -9,7 +9,6 @@
   "agents": {
     "defaults": {
       "model_name": "puru",
-      "context_window": 50000,
       "max_llm_retries": 10,
       "max_tool_iterations": 500,
       "tool_feedback": {
@@ -39,7 +38,6 @@
         ]
       },
       "settings": {
-        "token": "8535593654:AAEaEddzmyzVxkwWPy1l8JiHT7UfPZ-pOtA",
         "streaming": {
           "enabled": true
         }
