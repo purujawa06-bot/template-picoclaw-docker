@@ -1,7 +1,6 @@
 FROM sipeed/picoclaw:latest
 
-RUN apk add --no-cache gh git curl && \
-    rm -rf /sbin/apk /etc/apk /lib/apk /var/cache/apk /var/lib/apk
+RUN apk add --no-cache gh git curl
 
 ENV GODEBUG=madvdontneed=1
 ENV GOMEMLIMIT=50MiB
